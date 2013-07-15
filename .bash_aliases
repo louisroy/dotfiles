@@ -17,7 +17,8 @@ alias reload="sudo /etc/init.d/apache2 reload"
 alias status="sudo usr/sbin/apache2ctl status"
 
 # Git
-alias gp="git pull " 
+alias gpl="git pull " 
+alias gps="git push " 
 alias ga="git add "
 alias gc="git commit "
 alias gs="git status "
