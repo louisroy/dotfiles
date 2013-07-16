@@ -27,4 +27,4 @@ alias gc="git commit"
 alias gca="git commit -a"
 alias gd="git diff"
 alias gb="git branch"
-
+alias gr="git reset"
