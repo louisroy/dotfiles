@@ -1,3 +1,6 @@
+# Vi
+alias vi="vim"
+
 # Bash
 alias br="vi ~/.bashrc && source ~/.bashrc"
 alias ba="vi ~/.bash_aliases && source ~/.bash_aliases"
