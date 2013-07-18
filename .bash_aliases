@@ -1,3 +1,7 @@
+# Shortcuts
+alias ..="cd .."
+alias ~="cd ~"
+
 # Directory listing 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
