@@ -23,6 +23,7 @@ alias vi="vim"
 # Bash
 alias br="vi ~/.bashrc && source ~/.bashrc"
 alias ba="vi ~/.bash_aliases && source ~/.bash_aliases"
+alias bp="vi ~/.bash_profile && source ~/.bash_profile"
 
 # Utilities
 alias free="free -m"
