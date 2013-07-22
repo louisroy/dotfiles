@@ -18,6 +18,7 @@ alias la="ls -A"
 alias l="ls -CF"
 
 # Vi
+alias v="vim"
 alias vi="vim"
 
 # Bash
