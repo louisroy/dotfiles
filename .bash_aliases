@@ -49,3 +49,6 @@ alias gca="git commit -a"
 alias gd="git diff"
 alias gb="git branch"
 alias gr="git reset"
+
+# SSH
+alias dev="ssh dev"
