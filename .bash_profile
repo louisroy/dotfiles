@@ -48,12 +48,19 @@ fi
 SSH_ENV="$HOME/.ssh/environment"
 
 function start_agent {
-     echo "Initialising new SSH agent..."
-     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
-     echo succeeded
-     chmod 600 "${SSH_ENV}"
-     . "${SSH_ENV}" > /dev/null
-     /usr/bin/ssh-add;
+	echo "Initialising new SSH agent..."
+	if [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ];then
+		/usr/local/bin/ssh-pageant | sed 's/^echo/#echo/' > "${SSH_ENV}"
+		echo "succeded"
+		chmod 600 "${SSH_ENV}"
+		. "${SSH_ENV}" > /dev/null
+	else
+		/usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+		echo succeeded
+		chmod 600 "${SSH_ENV}"
+		. "${SSH_ENV}" > /dev/null
+		/usr/bin/ssh-add;
+	fi
 }
 
 # Source SSH settings, if applicable
@@ -61,9 +68,15 @@ function start_agent {
 if [ -f "${SSH_ENV}" ]; then
      . "${SSH_ENV}" > /dev/null
      #ps ${SSH_AGENT_PID} doesn't work under cywgin
-     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
-         start_agent;
-     }
+     if [ "$(expr substr $(uname -s) 1 6)" == "CYGWIN" ];then
+          ps -ef | grep $SSH_PAGEANT_PID | grep ssh-pageant$ > /dev/null || {
+          start_agent;
+  }
+     else
+          ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+               start_agent;
+          }
+     fi
 else
      start_agent;
 fi
