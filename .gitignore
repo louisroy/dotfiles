@@ -1,0 +1,11 @@
+# Packaged files
+*.gem
+
+# OS generated files
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Applications
+.sass-cache
