@@ -52,3 +52,6 @@ alias gr="git reset"
 
 # SSH
 alias dev="ssh dev"
+
+# Gems
+alias ssw="sass --watch global.css:global.scss"
