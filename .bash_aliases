@@ -36,8 +36,8 @@ alias upgrade="sudo aptitude safe-upgrade"
 alias remove="sudo aptitude remove"
 
 # Apache
-alias rs="sudo /etc/init.d/apache2 restart"
-alias rl="sudo /etc/init.d/apache2 reload"
+alias ars="sudo /etc/init.d/apache2 restart"
+alias arl="sudo /etc/init.d/apache2 reload"
 
 # Git
 alias gpl="git pull" 
