@@ -1,6 +1,8 @@
 # Shortcuts
 alias ..="cd .."
 alias ~="cd ~"
+alias gh="cd ~/projects/github"
+alias k7="cd ~/projects/cossette"
 
 # Directory listing 
 # enable color support of ls and also add handy aliases
