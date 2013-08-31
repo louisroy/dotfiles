@@ -1,3 +1,8 @@
+# Get OS name
+OS="$(uname)"
+
+echo $OS
+
 # Shortcuts
 alias ..="cd .."
 alias ~="cd ~"
@@ -32,10 +37,16 @@ alias bp="vi ~/.bash_profile && source ~/.bash_profile"
 alias free="free -m"
 
 # Package manager
-alias update="sudo aptitude update"
-alias install="sudo aptitude install"
-alias upgrade="sudo aptitude safe-upgrade"
-alias remove="sudo aptitude remove"
+case $OS in
+	Darwin) alias packagemanager="brew" ;;
+	Linux) alias packagemanager="sudo aptitude" ;;
+	*) alias packagemanager="apt-cyg" ;;
+esac
+
+alias update="packagemanager update"
+alias install="packagemanager install"
+alias upgrade="packagemanager safe-upgrade"
+alias remove="packagemanager remove"
 
 # Apache
 alias ars="sudo /etc/init.d/apache2 restart"
