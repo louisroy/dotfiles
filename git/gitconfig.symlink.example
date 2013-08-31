@@ -1,0 +1,5 @@
+[user]
+	name = Louis Roy
+	email = louisroy@louisroy.net
+[core]
+	excludesfile = ~/.gitignore
