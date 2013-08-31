@@ -1,5 +1,6 @@
 [user]
-	name = Louis Roy
-	email = louisroy@louisroy.net
+	name = AUTHORNAME
+	email = AUTHOREMAIL
 [core]
 	excludesfile = ~/.gitignore
+	editor = vim
