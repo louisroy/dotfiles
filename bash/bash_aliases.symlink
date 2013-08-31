@@ -1,8 +1,6 @@
 # Get OS name
 OS="$(uname)"
 
-echo $OS
-
 # Shortcuts
 alias ..="cd .."
 alias ~="cd ~"
