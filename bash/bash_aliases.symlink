@@ -47,8 +47,11 @@ alias upgrade="packagemanager safe-upgrade"
 alias remove="packagemanager remove"
 
 # Apache
-alias ars="sudo /etc/init.d/apache2 restart"
-alias arl="sudo /etc/init.d/apache2 reload"
+alias aprs="sudo /etc/init.d/apache2 restart"
+alias aprl="sudo /etc/init.d/apache2 reload"
+
+# MySQL
+alias myrs="sudo service mysqld restart"
 
 # Git
 alias gpl="git pull" 
