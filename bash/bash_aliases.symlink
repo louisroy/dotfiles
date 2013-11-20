@@ -51,7 +51,7 @@ alias aprs="sudo /etc/init.d/apache2 restart"
 alias aprl="sudo /etc/init.d/apache2 reload"
 
 # MySQL
-alias myrs="sudo service mysqld restart"
+alias myrs="sudo service mysql restart"
 
 # Git
 alias gpl="git pull" 
