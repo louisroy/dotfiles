@@ -22,6 +22,8 @@ alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
 
+alias dus="du -csh"
+
 # Vi
 alias v="vim"
 alias vi="vim"
