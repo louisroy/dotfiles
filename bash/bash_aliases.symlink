@@ -22,7 +22,7 @@ alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
 
-alias dus="du -csh"
+alias dus="sudo du -csh"
 
 # Vi
 alias v="vim"
