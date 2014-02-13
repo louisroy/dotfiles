@@ -36,6 +36,13 @@ alias bp="vi ~/.bash_profile && source ~/.bash_profile"
 # Utilities
 alias free="free -m"
 
+# Hosts
+case $OS in
+	Darwin) alias hosts="vi hosts" ;;
+	Linux) alias hosts="vi hosts" ;;
+	*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
+esac
+
 # Package manager
 case $OS in
 	Darwin) alias packagemanager="brew" ;;
