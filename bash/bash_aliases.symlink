@@ -55,6 +55,8 @@ alias install="packagemanager install"
 alias upgrade="packagemanager safe-upgrade"
 alias remove="packagemanager remove"
 
+alias piupgrade="packagemanager update && packagemanager upgrade && packagemanager install rpi-update && sudo rpi-update"
+
 # Apache
 alias aprs="sudo /etc/init.d/apache2 restart"
 alias aprl="sudo /etc/init.d/apache2 reload"
