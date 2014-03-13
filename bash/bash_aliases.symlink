@@ -38,8 +38,8 @@ alias free="free -m"
 
 # Hosts
 case $OS in
-	Darwin) alias hosts="vi hosts" ;;
-	Linux) alias hosts="vi hosts" ;;
+	Darwin) alias hosts="vi /private/etc/hosts" ;;
+	Linux) alias hosts="vi /etc/hosts" ;;
 	*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
 esac
 
