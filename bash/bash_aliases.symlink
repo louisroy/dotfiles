@@ -55,6 +55,13 @@ alias install="packagemanager install"
 alias upgrade="packagemanager safe-upgrade"
 alias remove="packagemanager remove"
 
+# Nmap
+case $OS in
+	Darwin) alias nmap="nmap" ;;
+	Linux) alias nmap="nmap" ;;
+	*) alias nmap="/cygdrive/c/Program\ Files\ \(x86\)/Nmap/nmap.exe" ;;
+esac 
+
 alias piupgrade="packagemanager update && packagemanager upgrade && packagemanager install rpi-update && sudo rpi-update"
 
 # Apache
