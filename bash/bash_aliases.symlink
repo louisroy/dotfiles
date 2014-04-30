@@ -78,6 +78,8 @@ alias gr="git reset"
 # SSH
 alias dev="ssh dev"
 alias crevier="ssh crevier"
+alias camoprod="ssh camoprod"
+alias camostaging="ssh camostaging"
 
 # Gems
 alias ssw="sass --watch global.scss:global.css"
