@@ -4,8 +4,6 @@ OS="$(uname)"
 # Shortcuts
 alias ..="cd .."
 alias ~="cd ~"
-alias gh="cd ~/projects/github"
-alias k7="cd ~/projects/cossette"
 
 # Directory listing 
 # enable color support of ls and also add handy aliases
@@ -52,7 +50,7 @@ esac
 
 alias update="packagemanager update"
 alias install="packagemanager install"
-alias upgrade="packagemanager safe-upgrade"
+alias upgrade="packagemanager upgrade"
 alias remove="packagemanager remove"
 
 # Nmap
@@ -72,6 +70,7 @@ alias aprl="sudo /etc/init.d/apache2 reload"
 alias myrs="sudo service mysql restart"
 
 # Git
+alias gcl="git clone"
 alias gpl="git pull" 
 alias gps="git push" 
 alias ga="git add"
@@ -88,5 +87,13 @@ alias crevier="ssh crevier"
 alias camoprod="ssh camoprod"
 alias camostaging="ssh camostaging"
 
-# Gems
-alias ssw="sass --watch global.scss:global.css"
+#PHP
+alias php="/usr/local/bin/php"
+alias usephp56="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php56"
+alias usephp55="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php55"
+alias usephp54="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php54"
+alias usephp53="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php53"
+
+
+
+
