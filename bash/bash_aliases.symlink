@@ -63,8 +63,13 @@ esac
 alias piupgrade="packagemanager update && packagemanager upgrade && packagemanager install rpi-update && sudo rpi-update"
 
 # Apache
-alias aprs="sudo /etc/init.d/apache2 restart"
-alias aprl="sudo /etc/init.d/apache2 reload"
+case $OS in
+	Darwin) alias webserver="sudo apachectl" ;;
+	Linux) alias webserver="sudo /etc/init.d/apache2" ;;
+	*) alias webserver="apache" ;;
+esac
+alias aprs="webserver restart"
+alias aprl="webserver reload"
 
 # MySQL
 alias myrs="sudo service mysql restart"
