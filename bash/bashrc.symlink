@@ -86,3 +86,5 @@ fi
 
 export EDITOR=vim
 export SVN_EDITOR=vim
+
+export ANDROID_HOME=/usr/local/opt/android-sdk

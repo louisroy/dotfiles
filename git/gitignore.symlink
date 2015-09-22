@@ -9,3 +9,5 @@ Thumbs.db
 
 # Applications
 .sass-cache
+
+.idea
