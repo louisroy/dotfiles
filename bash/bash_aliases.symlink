@@ -93,7 +93,11 @@ alias camoprod="ssh camoprod"
 alias camostaging="ssh camostaging"
 
 #PHP
-alias php="/usr/local/bin/php"
+case $OS in
+	Darwin) alias php="/usr/local/bin/php";;
+	*) alias php="php";;
+esac
+
 alias usephp56="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php56"
 alias usephp55="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php55"
 alias usephp54="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php54"
