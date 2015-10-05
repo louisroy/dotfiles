@@ -3,6 +3,8 @@ if [ -f "${HOME}/.bashrc" ] ; then
   source "${HOME}/.bashrc"
 fi
 
+export PATH="/usr/local/sbin:$PATH"
+
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
 # Setup SSH Agent
