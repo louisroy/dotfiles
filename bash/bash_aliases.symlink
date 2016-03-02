@@ -36,7 +36,7 @@ alias free="free -m"
 
 # Hosts
 case $OS in
-	Darwin) alias hosts="vi /private/etc/hosts" ;;
+	Darwin) alias hosts="sudo vi /private/etc/hosts" ;;
 	Linux) alias hosts="vi /etc/hosts" ;;
 	*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
 esac
@@ -60,19 +60,38 @@ case $OS in
 	*) alias nmap="/cygdrive/c/Program\ Files\ \(x86\)/Nmap/nmap.exe" ;;
 esac 
 
-alias piupgrade="packagemanager update && packagemanager upgrade && packagemanager install rpi-update && sudo rpi-update"
-
-# Apache
+# Web server
 case $OS in
 	Darwin) alias webserver="sudo apachectl" ;;
 	Linux) alias webserver="sudo /etc/init.d/apache2" ;;
 	*) alias webserver="apache" ;;
 esac
-alias aprs="webserver restart"
-alias aprl="webserver reload"
 
-# MySQL
-alias myrs="sudo service mysql restart"
+alias webstr="webserver start"
+alias webstp="webserver stop"
+alias webrst="webserver restart"
+alias webrld="webserver reload"
+alias webcnf="sudo vi /etc/apache2/httpd.conf"
+alias weberr="tail -n 15 /var/log/apache2/error_log"
+
+# Database
+case $OS in
+	Darwin) alias dbserver="sudo service mysql" ;;
+	Linux) alias dbserver="sudo service mysql" ;;
+	*) alias dbserver="sudo service mysql" ;;
+esac
+
+alias dbstr="dbserver stop"
+alias dbstp="dbserver stop"
+alias dbrst="dbserver restart"
+
+#PHP
+case $OS in
+	Darwin) alias php="/usr/local/bin/php";;
+	*) alias php="php";;
+esac
+
+alias phpcnf="vim /usr/local/etc/php/5.6/php.ini"
 
 # Git
 alias gcl="git clone"
@@ -85,24 +104,3 @@ alias gca="git commit -a"
 alias gd="git diff"
 alias gb="git branch"
 alias gr="git reset"
-
-# SSH
-alias dev="ssh dev"
-alias crevier="ssh crevier"
-alias camoprod="ssh camoprod"
-alias camostaging="ssh camostaging"
-
-#PHP
-case $OS in
-	Darwin) alias php="/usr/local/bin/php";;
-	*) alias php="php";;
-esac
-
-alias usephp56="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php56"
-alias usephp55="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php55"
-alias usephp54="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php54"
-alias usephp53="packagemanager unlink php56 && packagemanager unlink php55 && packagemanager unlink php54 && packagemanager unlink php53 && packagemanager link php53"
-
-
-
-

@@ -87,4 +87,18 @@ fi
 export EDITOR=vim
 export SVN_EDITOR=vim
 
-export ANDROID_HOME=/usr/local/opt/android-sdk
+# Include Drush bash customizations.
+if [ -f "/Users/louis.roy/.drush/drush.bashrc" ] ; then
+  source /Users/louis.roy/.drush/drush.bashrc
+fi
+
+# Include Drush completion.
+if [ -f "/Users/louis.roy/.drush/drush.complete.sh" ] ; then
+  source /Users/louis.roy/.drush/drush.complete.sh
+fi
+
+# Include Drush prompt customizations.
+if [ -f "/Users/louis.roy/.drush/drush.prompt.sh" ] ; then
+  source /Users/louis.roy/.drush/drush.prompt.sh
+fi
+
