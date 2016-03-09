@@ -14,4 +14,4 @@ export ANDROID_NDK=/Users/louis.roy/android-ndk/android-ndk-r10e
 # Setup SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
 
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
