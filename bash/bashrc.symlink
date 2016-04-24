@@ -101,4 +101,3 @@ fi
 if [ -f "/Users/louis.roy/.drush/drush.prompt.sh" ] ; then
   source /Users/louis.roy/.drush/drush.prompt.sh
 fi
-

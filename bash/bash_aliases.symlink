@@ -76,7 +76,7 @@ alias weberr="tail -n 15 /var/log/apache2/error_log"
 
 # Database
 case $OS in
-	Darwin) alias dbserver="sudo service mysql" ;;
+	Darwin) alias dbserver="brew services mysql" ;;
 	Linux) alias dbserver="sudo service mysql" ;;
 	*) alias dbserver="sudo service mysql" ;;
 esac
