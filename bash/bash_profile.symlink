@@ -11,7 +11,7 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 
 export ANDROID_NDK=/Users/louis.roy/android-ndk/android-ndk-r10e
 
-export HOMEBREW_GITHUB_API_TOKEN=b811c797a45bfaf4ff130cbedfb09354fcf41fa4
+export HOMEBREW_GITHUB_API_TOKEN=13898d038a4f477a1ce736a3a6141dd08f0f1ffc
 
 # Setup SSH Agent
 SSH_ENV="$HOME/.ssh/environment"

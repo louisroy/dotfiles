@@ -44,7 +44,7 @@ esac
 # Package manager
 case $OS in
 	Darwin) alias packagemanager="brew" ;;
-	Linux) alias packagemanager="sudo aptitude" ;;
+	Linux) alias packagemanager="sudo apt-get" ;;
 	*) alias packagemanager="apt-cyg" ;;
 esac
 
