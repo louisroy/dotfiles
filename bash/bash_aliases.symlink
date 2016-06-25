@@ -41,6 +41,13 @@ case $OS in
 	*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
 esac
 
+# Services
+case $OS in
+	Darwin) alias services="brew services" ;;
+	Linux) alias services="sudo service" ;;
+	*) alias services="sudo service" ;;
+esac
+
 # Package manager
 case $OS in
 	Darwin) alias packagemanager="brew" ;;
@@ -76,20 +83,20 @@ alias weberrors="tail -n 30 /var/log/apache2/error_log"
 
 # Database
 case $OS in
-	Darwin) alias db="brew services mysql" ;;
-	Linux) alias db="sudo service mysql" ;;
-	*) alias db="sudo service mysql" ;;
+	Darwin) alias db="mysql" ;;
+	Linux) alias db="mysql" ;;
+	*) alias db="mysql" ;;
 esac
 
-alias dbstart="db start"
-alias dbstop="db stop"
-alias dbrestart="db restart"
+alias dbstart="services db start"
+alias dbstop="services db stop"
+alias dbrestart="services db restart"
 
 case $OS in
 	Darwin)
-		alias dbstart="brew services start mysql"
-		alias dbstop="brew services stop mysql"
-		alias dbrestart="brew services restart mysql"
+		alias dbstart="services start mysql"
+		alias dbstop="services stop mysql"
+		alias dbrestart="services restart mysql"
 	;;
 esac
 
