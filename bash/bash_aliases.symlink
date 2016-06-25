@@ -62,7 +62,7 @@ esac
 
 # Web server
 case $OS in
-	Darwin) alias web="sudo apachectl" ;;
+	Darwin) alias web="sudo apachectl -e info -k" ;;
 	Linux) alias web="sudo /etc/init.d/apache2" ;;
 	*) alias web="apache" ;;
 esac
@@ -84,6 +84,14 @@ esac
 alias dbstart="db start"
 alias dbstop="db stop"
 alias dbrestart="db restart"
+
+case $OS in
+	Darwin)
+		alias dbstart="brew services start mysql"
+		alias dbstop="brew services stop mysql"
+		alias dbrestart="brew services restart mysql"
+	;;
+esac
 
 #PHP
 case $OS in
