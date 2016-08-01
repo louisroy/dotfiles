@@ -78,8 +78,8 @@ alias webstart="web start"
 alias webstop="web stop"
 alias webrestart="web restart"
 alias webreload="web reload"
-alias webconfig="sudo vi /etc/apache2/httpd.conf"
 alias weberrors="tail -n 30 /var/log/apache2/error_log"
+alias webconfig="sudo vi /etc/apache2/httpd.conf && webrestart"
 
 # Database
 case $OS in
