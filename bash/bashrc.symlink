@@ -101,3 +101,5 @@ fi
 if [ -f "/Users/louis.roy/.drush/drush.prompt.sh" ] ; then
   source /Users/louis.roy/.drush/drush.prompt.sh
 fi
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
