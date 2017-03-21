@@ -123,3 +123,7 @@ alias gca="git add --all && git commit -am"
 alias gd="git diff"
 alias gb="git branch"
 alias gr="git reset"
+
+function perf {
+  curl -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
+}
