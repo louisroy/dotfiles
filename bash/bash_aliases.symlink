@@ -39,21 +39,20 @@ alias free="free -m"
 case $OS in
 	Darwin) alias hosts="sudo vi /private/etc/hosts" ;;
 	Linux) alias hosts="vi /etc/hosts" ;;
-	*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
+	CYGWIN*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
 esac
 
 # Services
 case $OS in
 	Darwin) alias services="brew services" ;;
 	Linux) alias services="sudo service" ;;
-	*) alias services="sudo service" ;;
 esac
 
 # Package manager
 case $OS in
 	Darwin) alias packagemanager="brew" ;;
 	Linux) alias packagemanager="sudo apt-get" ;;
-	*) alias packagemanager="apt-cyg" ;;
+	CYGWIN*) alias packagemanager="apt-cyg" ;;
 esac
 
 alias update="packagemanager update"
@@ -72,7 +71,6 @@ esac
 case $OS in
 	Darwin) alias web="sudo apachectl -e info -k" ;;
 	Linux) alias web="sudo /etc/init.d/apache2" ;;
-	*) alias web="apache" ;;
 esac
 
 alias webstart="web start"
@@ -86,7 +84,6 @@ alias webconfig="sudo vi /etc/apache2/httpd.conf && webrestart"
 case $OS in
 	Darwin) alias db="mysql" ;;
 	Linux) alias db="mysql" ;;
-	*) alias db="mysql" ;;
 esac
 
 alias dbstart="services db start"
@@ -124,6 +121,7 @@ alias gd="git diff"
 alias gb="git branch"
 alias gr="git reset"
 
+# Performance function
 function perf {
   curl -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
 }
