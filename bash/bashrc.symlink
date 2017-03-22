@@ -5,6 +5,14 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# FIX: Cygwin-specific SSH setup
+if [[ "$(uname -s)" == *"CYGWIN"* ]]
+then
+	# ssh-pageant
+	eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
+fi
+
+# If tmux is available, launch
 if command -v tmux>/dev/null; then
     [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
 fi
