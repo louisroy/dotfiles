@@ -20,8 +20,6 @@ alias ll="ls -alF"
 alias la="ls -A"
 alias l="ls -CF"
 
-alias dus="sudo du -csh"
-
 # Vi
 alias v="vim"
 alias vi="vim"
@@ -32,81 +30,16 @@ alias br="vi ~/.bashrc && source ~/.bashrc"
 alias ba="vi ~/.bash_aliases && source ~/.bash_aliases"
 alias bp="vi ~/.bash_profile && source ~/.bash_profile"
 
-# Utilities
-alias free="free -m"
-
-# Hosts
-case $OS in
-	Darwin) alias hosts="sudo vi /private/etc/hosts" ;;
-	Linux) alias hosts="vi /etc/hosts" ;;
-	CYGWIN*) alias hosts="vi /cygdrive/c/Windows/System32/drivers/etc/hosts" ;;
-esac
-
-# Services
-case $OS in
-	Darwin) alias services="brew services" ;;
-	Linux) alias services="sudo service" ;;
-esac
-
 # Package manager
 case $OS in
 	Darwin) alias packagemanager="brew" ;;
 	Linux) alias packagemanager="sudo apt-get" ;;
-	CYGWIN*) alias packagemanager="apt-cyg" ;;
 esac
 
 alias update="packagemanager update"
 alias install="packagemanager install"
 alias upgrade="packagemanager upgrade"
 alias remove="packagemanager remove"
-
-# Nmap
-case $OS in
-	Darwin) alias nmap="nmap" ;;
-	Linux) alias nmap="nmap" ;;
-	*) alias nmap="/cygdrive/c/Program\ Files\ \(x86\)/Nmap/nmap.exe" ;;
-esac 
-
-# Web server
-case $OS in
-	Darwin) alias web="sudo apachectl -e info -k" ;;
-	Linux) alias web="sudo /etc/init.d/apache2" ;;
-esac
-
-alias webstart="web start"
-alias webstop="web stop"
-alias webrestart="web restart"
-alias webreload="web reload"
-alias weberrors="tail -n 30 /var/log/apache2/error_log"
-alias webconfig="sudo vi /etc/apache2/httpd.conf && webrestart"
-
-# Database
-case $OS in
-	Darwin) alias db="mysql" ;;
-	Linux) alias db="mysql" ;;
-esac
-
-alias dbstart="services db start"
-alias dbstop="services db stop"
-alias dbrestart="services db restart"
-
-case $OS in
-	Darwin)
-		alias dbstart="services start mysql"
-		alias dbstop="services stop mysql"
-		alias dbrestart="services restart mysql"
-	;;
-esac
-
-#PHP
-case $OS in
-	Darwin) alias php="/usr/local/bin/php";;
-	*) alias php="php";;
-esac
-
-alias phpini="php -i | grep 'Loaded Configuration File'"
-alias phpconfig="vim /usr/local/etc/php/5.6/php.ini"
-alias phpconfig="vim /usr/local/etc/php/7.0/php.ini"
 
 # Git
 alias gcl="git clone"
@@ -121,7 +54,5 @@ alias gd="git diff"
 alias gb="git branch"
 alias gr="git reset"
 
-# Performance function
-function perf {
-  curl -o /dev/null -s -w "%{time_connect} + %{time_starttransfer} = %{time_total}\n" "$1"
-}
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+alias android='cd $ANDROID_HOME/tools && ./emulator -avd Nexus_5X_API_23'
