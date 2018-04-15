@@ -5,17 +5,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-# FIX: Cygwin-specific SSH setup
-if [[ "$(uname -s)" == *"CYGWIN"* ]]
-then
-	# ssh-pageant
-	eval $(/usr/bin/ssh-pageant -r -a "/tmp/.ssh-pageant-$USERNAME")
-fi
-
 # If tmux is available, launch
-if command -v tmux>/dev/null; then
-    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
+#if command -v tmux>/dev/null; then
+#    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace
@@ -98,20 +91,5 @@ fi
 
 export EDITOR=vim
 export SVN_EDITOR=vim
-
-# Include Drush bash customizations.
-if [ -f "/Users/louis.roy/.drush/drush.bashrc" ] ; then
-  source /Users/louis.roy/.drush/drush.bashrc
-fi
-
-# Include Drush completion.
-if [ -f "/Users/louis.roy/.drush/drush.complete.sh" ] ; then
-  source /Users/louis.roy/.drush/drush.complete.sh
-fi
-
-# Include Drush prompt customizations.
-if [ -f "/Users/louis.roy/.drush/drush.prompt.sh" ] ; then
-  source /Users/louis.roy/.drush/drush.prompt.sh
-fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
