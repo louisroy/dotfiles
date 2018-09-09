@@ -71,7 +71,8 @@ xterm*|rxvt*)
 esac
 
 # Custom
-PS1='\[\033[0;32m\]\u\[\033[0;36m\] \w\[\033[00m\]: '
+#PS1='\[\033[0;32m\]\u\[\033[0;36m\] \w\[\033[00m\]: '
+PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h \[$(tput sgr0)\]\[\033[38;5;6m\]\w\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
