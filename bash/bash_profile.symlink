@@ -5,21 +5,5 @@ fi
 
 export PATH="/usr/local/sbin:$PATH"
 
-export PATH="$HOME/.composer/vendor/bin:$PATH"
-
-if [ -d "$PWD/node_modules/.bin" ]; then 
-    export PATH="$PWD/node_modules/.bin:$PATH"
-fi
-
-export ANDROID_HOME=/usr/local/opt/android-sdk
-
-export ANDROID_NDK=/Users/louis.roy/android-ndk/android-ndk-r10e
-
-export HOMEBREW_GITHUB_API_TOKEN=13898d038a4f477a1ce736a3a6141dd08f0f1ffc
-
 # Setup SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
-
-# eval "$(rbenv init -)"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

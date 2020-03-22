@@ -30,17 +30,6 @@ alias br="vi ~/.bashrc && source ~/.bashrc"
 alias ba="vi ~/.bash_aliases && source ~/.bash_aliases"
 alias bp="vi ~/.bash_profile && source ~/.bash_profile"
 
-# Package manager
-case $OS in
-	Darwin) alias packagemanager="brew" ;;
-	Linux) alias packagemanager="sudo apt-get" ;;
-esac
-
-alias update="packagemanager update"
-alias install="packagemanager install"
-alias upgrade="packagemanager upgrade"
-alias remove="packagemanager remove"
-
 # Git
 alias gcl="git clone"
 alias gpl="git pull" 
@@ -53,6 +42,3 @@ alias gca="git add --all && git commit -am"
 alias gd="git diff"
 alias gb="git branch"
 alias gr="git reset"
-
-alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
-alias android='cd $ANDROID_HOME/tools && ./emulator -avd Nexus_5X_API_23'
