@@ -4,6 +4,7 @@ if [ -f "${HOME}/.bashrc" ] ; then
 fi
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="${PATH}:$(python -c 'import site; print(site.USER_BASE)')/bin"
 
 # Setup SSH Agent
 SSH_ENV="$HOME/.ssh/environment"
