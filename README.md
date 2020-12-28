@@ -1,4 +1,12 @@
-# My dotfiles
+# louisroy-dotfiles
 
-[GitHub's guide on the subject](http://dotfiles.github.io/).
+My dotfiles using dotbot.
 
+## Requirements
+
+- Git
+
+## Installation
+
+- Clone this repository
+- Run ``./install``
