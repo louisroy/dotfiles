@@ -7,13 +7,14 @@ if [ ! -d "$OMZDIR" ]; then
   /bin/sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
   echo 'Updating oh-my-zsh'
-  upgrade_oh_my_zsh
+  /bin/sh "$ZSH/tools/upgrade.sh"
 fi
 
 # Change default shell
-if [! $0 = "-zsh"]; then
+if [ ! $0 = "-zsh" ]; then
   echo 'Changing default shell to zsh'
-  chsh -s /bin/zsh
+  # See https://askubuntu.com/a/812426 if fails with authentication
+  chsh -s $(which zsh)
 else
   echo 'Already using zsh'
 fi
