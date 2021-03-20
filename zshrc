@@ -51,18 +51,15 @@ alias vi="vim"
 alias zr="vi ~/.zshrc && source ~/.zshrc"
 
 # Platform-specific items
-if grep -q microsoft /proc/version; then
+if  [ -x /proc/version ] && grep -q microsoft /proc/version; then
   # Ubuntu on Windows
   if ! which keychain > /dev/null; then
     sudo apt install keychain
   fi
   /usr/bin/keychain --nogui $HOME/.ssh/korem
   source $HOME/.keychain/L1W-P0047-sh
-elif [ "$(uname)" == "Darwin" ]; then
-  # MacOS
 else
-  # Native Linux
-  echo "native Linux"
+  # Other
 fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
